@@ -1,0 +1,13 @@
+customer_id,customer_name,segment,region,industry,signup_date
+C001,Acme Systems,Enterprise,West,Technology,2025-11-15
+C002,Beacon Labs,SMB,East,Professional Services,2026-01-20
+C003,Cygnus Health,Mid-Market,Central,Healthcare,2025-08-01
+C004,Delta Commerce,Enterprise,East,Retail,2025-06-10
+C005,Ember Studio,SMB,West,Media,2026-01-05
+C006,Flux Analytics,Mid-Market,West,Technology,2025-10-18
+C007,Gamma Works,Mid-Market,East,Manufacturing,2026-01-25
+C008,Helio Financial,Enterprise,Central,Financial Services,2025-04-12
+C009,Ion Design,SMB,West,Design,2026-02-14
+C010,Juniper Logistics,Mid-Market,Central,Logistics,2025-09-09
+C011,Kappa Cloud,Enterprise,West,Technology,2025-03-22
+C012,Lumen Legal,SMB,East,Legal,2026-04-10
