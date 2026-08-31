@@ -411,3 +411,14 @@ dim_customer        dim_plan        dim_month
                      v
           mart_revenue_growth
           grain: month × segment
+
+
+## Key Findings
+
+- MRR increased from $38.0K to $40.7K, but monthly growth was volatile.
+- Mid-Market showed the greatest retention volatility.
+- August–September recovery was driven primarily by reactivation rather
+  than new acquisition or expansion.
+- Enterprise remained the largest and most stable MRR base.
+
+[View detailed findings and recommendations](Finding%20%26%20Recommendation.md)
