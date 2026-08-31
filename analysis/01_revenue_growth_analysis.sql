@@ -1,9 +1,13 @@
+-- ============================================================
+-- Analysis 01: Overall MRR Growth
+--
 -- Business Question:
--- Is recurring revenue growth slowing, and what is driving the change?
-
+-- Is recurring revenue growth slowing, and what is driving
+-- the change?
+--
 -- Grain:
 -- one row per month
-*/
+-- ============================================================
 
 
 WITH company_monthly AS (
