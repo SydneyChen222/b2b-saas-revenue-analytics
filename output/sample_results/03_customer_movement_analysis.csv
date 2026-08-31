@@ -1,0 +1,141 @@
+month,customer_id,customer_name,segment,region,industry,previous_mrr,current_mrr,new_mrr,expansion_mrr,contraction_mrr,churn_mrr,reactivation_mrr,movement_type
+2026-01,C001,Acme Systems,Enterprise,West,Technology,5000.0,5000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-02,C001,Acme Systems,Enterprise,West,Technology,5000.0,5000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-03,C001,Acme Systems,Enterprise,West,Technology,5000.0,6500.0,0.0,1500.0,0.0,0.0,0.0,Expanded
+2026-04,C001,Acme Systems,Enterprise,West,Technology,6500.0,6500.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-05,C001,Acme Systems,Enterprise,West,Technology,6500.0,5800.0,0.0,0.0,700.0,0.0,0.0,Contracted
+2026-06,C001,Acme Systems,Enterprise,West,Technology,5800.0,5800.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-07,C001,Acme Systems,Enterprise,West,Technology,5800.0,5800.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-08,C001,Acme Systems,Enterprise,West,Technology,5800.0,5800.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-09,C001,Acme Systems,Enterprise,West,Technology,5800.0,5800.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-10,C001,Acme Systems,Enterprise,West,Technology,5800.0,5800.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-11,C001,Acme Systems,Enterprise,West,Technology,5800.0,5800.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-12,C001,Acme Systems,Enterprise,West,Technology,5800.0,5800.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-01,C003,Cygnus Health,Mid-Market,Central,Healthcare,2000.0,2000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-02,C003,Cygnus Health,Mid-Market,Central,Healthcare,2000.0,2000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-03,C003,Cygnus Health,Mid-Market,Central,Healthcare,2000.0,1500.0,0.0,0.0,500.0,0.0,0.0,Contracted
+2026-04,C003,Cygnus Health,Mid-Market,Central,Healthcare,1500.0,1500.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-05,C003,Cygnus Health,Mid-Market,Central,Healthcare,1500.0,0.0,0.0,0.0,0.0,1500.0,0.0,Churned
+2026-06,C003,Cygnus Health,Mid-Market,Central,Healthcare,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-07,C003,Cygnus Health,Mid-Market,Central,Healthcare,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-08,C003,Cygnus Health,Mid-Market,Central,Healthcare,0.0,1800.0,0.0,0.0,0.0,0.0,1800.0,Reactivated
+2026-09,C003,Cygnus Health,Mid-Market,Central,Healthcare,1800.0,1800.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-10,C003,Cygnus Health,Mid-Market,Central,Healthcare,1800.0,1800.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-11,C003,Cygnus Health,Mid-Market,Central,Healthcare,1800.0,1800.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-12,C003,Cygnus Health,Mid-Market,Central,Healthcare,1800.0,1800.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-01,C004,Delta Commerce,Enterprise,East,Retail,7000.0,7000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-02,C004,Delta Commerce,Enterprise,East,Retail,7000.0,7000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-03,C004,Delta Commerce,Enterprise,East,Retail,7000.0,7000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-04,C004,Delta Commerce,Enterprise,East,Retail,7000.0,7800.0,0.0,800.0,0.0,0.0,0.0,Expanded
+2026-05,C004,Delta Commerce,Enterprise,East,Retail,7800.0,7800.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-06,C004,Delta Commerce,Enterprise,East,Retail,7800.0,8300.0,0.0,500.0,0.0,0.0,0.0,Expanded
+2026-07,C004,Delta Commerce,Enterprise,East,Retail,8300.0,8300.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-08,C004,Delta Commerce,Enterprise,East,Retail,8300.0,8300.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-09,C004,Delta Commerce,Enterprise,East,Retail,8300.0,8300.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-10,C004,Delta Commerce,Enterprise,East,Retail,8300.0,8300.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-11,C004,Delta Commerce,Enterprise,East,Retail,8300.0,8300.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-12,C004,Delta Commerce,Enterprise,East,Retail,8300.0,8300.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-01,C006,Flux Analytics,Mid-Market,West,Technology,2500.0,2500.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-02,C006,Flux Analytics,Mid-Market,West,Technology,2500.0,2500.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-03,C006,Flux Analytics,Mid-Market,West,Technology,2500.0,2500.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-04,C006,Flux Analytics,Mid-Market,West,Technology,2500.0,3200.0,0.0,700.0,0.0,0.0,0.0,Expanded
+2026-05,C006,Flux Analytics,Mid-Market,West,Technology,3200.0,3200.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-06,C006,Flux Analytics,Mid-Market,West,Technology,3200.0,3200.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-07,C006,Flux Analytics,Mid-Market,West,Technology,3200.0,3500.0,0.0,300.0,0.0,0.0,0.0,Expanded
+2026-08,C006,Flux Analytics,Mid-Market,West,Technology,3500.0,3500.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-09,C006,Flux Analytics,Mid-Market,West,Technology,3500.0,3500.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-10,C006,Flux Analytics,Mid-Market,West,Technology,3500.0,3500.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-11,C006,Flux Analytics,Mid-Market,West,Technology,3500.0,3500.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-12,C006,Flux Analytics,Mid-Market,West,Technology,3500.0,3500.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-01,C008,Helio Financial,Enterprise,Central,Financial Services,9000.0,9000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-02,C008,Helio Financial,Enterprise,Central,Financial Services,9000.0,9000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-03,C008,Helio Financial,Enterprise,Central,Financial Services,9000.0,9000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-04,C008,Helio Financial,Enterprise,Central,Financial Services,9000.0,9000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-05,C008,Helio Financial,Enterprise,Central,Financial Services,9000.0,9000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-06,C008,Helio Financial,Enterprise,Central,Financial Services,9000.0,9000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-07,C008,Helio Financial,Enterprise,Central,Financial Services,9000.0,9000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-08,C008,Helio Financial,Enterprise,Central,Financial Services,9000.0,9000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-09,C008,Helio Financial,Enterprise,Central,Financial Services,9000.0,9000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-10,C008,Helio Financial,Enterprise,Central,Financial Services,9000.0,9000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-11,C008,Helio Financial,Enterprise,Central,Financial Services,9000.0,9000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-12,C008,Helio Financial,Enterprise,Central,Financial Services,9000.0,9000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-01,C010,Juniper Logistics,Mid-Market,Central,Logistics,2200.0,2200.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-02,C010,Juniper Logistics,Mid-Market,Central,Logistics,2200.0,2200.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-03,C010,Juniper Logistics,Mid-Market,Central,Logistics,2200.0,0.0,0.0,0.0,0.0,2200.0,0.0,Churned
+2026-04,C010,Juniper Logistics,Mid-Market,Central,Logistics,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-05,C010,Juniper Logistics,Mid-Market,Central,Logistics,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-06,C010,Juniper Logistics,Mid-Market,Central,Logistics,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-07,C010,Juniper Logistics,Mid-Market,Central,Logistics,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-08,C010,Juniper Logistics,Mid-Market,Central,Logistics,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-09,C010,Juniper Logistics,Mid-Market,Central,Logistics,0.0,2500.0,0.0,0.0,0.0,0.0,2500.0,Reactivated
+2026-10,C010,Juniper Logistics,Mid-Market,Central,Logistics,2500.0,2500.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-11,C010,Juniper Logistics,Mid-Market,Central,Logistics,2500.0,2500.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-12,C010,Juniper Logistics,Mid-Market,Central,Logistics,2500.0,2500.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-01,C011,Kappa Cloud,Enterprise,West,Technology,10000.0,10000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-02,C011,Kappa Cloud,Enterprise,West,Technology,10000.0,10000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-03,C011,Kappa Cloud,Enterprise,West,Technology,10000.0,10000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-04,C011,Kappa Cloud,Enterprise,West,Technology,10000.0,10000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-05,C011,Kappa Cloud,Enterprise,West,Technology,10000.0,10000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-06,C011,Kappa Cloud,Enterprise,West,Technology,10000.0,10000.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-07,C011,Kappa Cloud,Enterprise,West,Technology,10000.0,8500.0,0.0,0.0,1500.0,0.0,0.0,Contracted
+2026-08,C011,Kappa Cloud,Enterprise,West,Technology,8500.0,8500.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-09,C011,Kappa Cloud,Enterprise,West,Technology,8500.0,8500.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-10,C011,Kappa Cloud,Enterprise,West,Technology,8500.0,8500.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-11,C011,Kappa Cloud,Enterprise,West,Technology,8500.0,8500.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-12,C011,Kappa Cloud,Enterprise,West,Technology,8500.0,8500.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-01,C002,Beacon Labs,SMB,East,Professional Services,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-02,C002,Beacon Labs,SMB,East,Professional Services,0.0,500.0,500.0,0.0,0.0,0.0,0.0,New
+2026-03,C002,Beacon Labs,SMB,East,Professional Services,500.0,500.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-04,C002,Beacon Labs,SMB,East,Professional Services,500.0,750.0,0.0,250.0,0.0,0.0,0.0,Expanded
+2026-05,C002,Beacon Labs,SMB,East,Professional Services,750.0,750.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-06,C002,Beacon Labs,SMB,East,Professional Services,750.0,0.0,0.0,0.0,0.0,750.0,0.0,Churned
+2026-07,C002,Beacon Labs,SMB,East,Professional Services,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-08,C002,Beacon Labs,SMB,East,Professional Services,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-09,C002,Beacon Labs,SMB,East,Professional Services,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-10,C002,Beacon Labs,SMB,East,Professional Services,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-11,C002,Beacon Labs,SMB,East,Professional Services,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-12,C002,Beacon Labs,SMB,East,Professional Services,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-01,C005,Ember Studio,SMB,West,Media,0.0,300.0,300.0,0.0,0.0,0.0,0.0,New
+2026-02,C005,Ember Studio,SMB,West,Media,300.0,0.0,0.0,0.0,0.0,300.0,0.0,Churned
+2026-03,C005,Ember Studio,SMB,West,Media,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-04,C005,Ember Studio,SMB,West,Media,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-05,C005,Ember Studio,SMB,West,Media,0.0,400.0,0.0,0.0,0.0,0.0,400.0,Reactivated
+2026-06,C005,Ember Studio,SMB,West,Media,400.0,400.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-07,C005,Ember Studio,SMB,West,Media,400.0,400.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-08,C005,Ember Studio,SMB,West,Media,400.0,400.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-09,C005,Ember Studio,SMB,West,Media,400.0,400.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-10,C005,Ember Studio,SMB,West,Media,400.0,400.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-11,C005,Ember Studio,SMB,West,Media,400.0,400.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-12,C005,Ember Studio,SMB,West,Media,400.0,400.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-01,C007,Gamma Works,Mid-Market,East,Manufacturing,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-02,C007,Gamma Works,Mid-Market,East,Manufacturing,0.0,1800.0,1800.0,0.0,0.0,0.0,0.0,New
+2026-03,C007,Gamma Works,Mid-Market,East,Manufacturing,1800.0,1800.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-04,C007,Gamma Works,Mid-Market,East,Manufacturing,1800.0,1200.0,0.0,0.0,600.0,0.0,0.0,Contracted
+2026-05,C007,Gamma Works,Mid-Market,East,Manufacturing,1200.0,1200.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-06,C007,Gamma Works,Mid-Market,East,Manufacturing,1200.0,1200.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-07,C007,Gamma Works,Mid-Market,East,Manufacturing,1200.0,0.0,0.0,0.0,0.0,1200.0,0.0,Churned
+2026-08,C007,Gamma Works,Mid-Market,East,Manufacturing,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-09,C007,Gamma Works,Mid-Market,East,Manufacturing,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-10,C007,Gamma Works,Mid-Market,East,Manufacturing,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-11,C007,Gamma Works,Mid-Market,East,Manufacturing,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-12,C007,Gamma Works,Mid-Market,East,Manufacturing,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-02,C009,Ion Design,SMB,West,Design,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-03,C009,Ion Design,SMB,West,Design,0.0,600.0,600.0,0.0,0.0,0.0,0.0,New
+2026-04,C009,Ion Design,SMB,West,Design,600.0,600.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-05,C009,Ion Design,SMB,West,Design,600.0,600.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-06,C009,Ion Design,SMB,West,Design,600.0,900.0,0.0,300.0,0.0,0.0,0.0,Expanded
+2026-07,C009,Ion Design,SMB,West,Design,900.0,900.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-08,C009,Ion Design,SMB,West,Design,900.0,900.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-09,C009,Ion Design,SMB,West,Design,900.0,900.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-10,C009,Ion Design,SMB,West,Design,900.0,900.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-11,C009,Ion Design,SMB,West,Design,900.0,900.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-12,C009,Ion Design,SMB,West,Design,900.0,900.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-04,C012,Lumen Legal,SMB,East,Legal,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-05,C012,Lumen Legal,SMB,East,Legal,0.0,400.0,400.0,0.0,0.0,0.0,0.0,New
+2026-06,C012,Lumen Legal,SMB,East,Legal,400.0,400.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-07,C012,Lumen Legal,SMB,East,Legal,400.0,400.0,0.0,0.0,0.0,0.0,0.0,Stable
+2026-08,C012,Lumen Legal,SMB,East,Legal,400.0,0.0,0.0,0.0,0.0,400.0,0.0,Churned
+2026-09,C012,Lumen Legal,SMB,East,Legal,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-10,C012,Lumen Legal,SMB,East,Legal,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-11,C012,Lumen Legal,SMB,East,Legal,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
+2026-12,C012,Lumen Legal,SMB,East,Legal,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Inactive
