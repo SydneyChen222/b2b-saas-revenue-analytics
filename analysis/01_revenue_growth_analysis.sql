@@ -1,39 +1,8 @@
--- ============================================================
--- Analysis 01: Overall MRR Growth
---
 -- Business Question:
--- Is recurring revenue growth slowing, and what is driving
--- the change?
---
--- Source:
--- mart_revenue_growth
---
--- Analysis Grain:
+-- Is recurring revenue growth slowing, and what is driving the change?
+
+-- Grain:
 -- one row per month
--- ============================================================
-/*
-output should looks like sth like:
-| Month | Beginning MRR | Ending MRR | Net Change | Growth % |   New | Expansion | Contraction | Churn |  NRR |
-| ----- | ------------: | ---------: | ---------: | -------: | ----: | --------: | ----------: | ----: | ---: |
-| Feb   |        36,000 |     38,000 |     +2,000 |     5.6% | 2,300 |       500 |           0 |   800 |  99% |
-| Mar   |        38,000 |     39,000 |     +1,000 |     2.6% |   600 |     1,500 |         500 |   600 | 101% |
-| Apr   |        39,000 |     39,500 |       +500 |     1.3% |   400 |       800 |         700 |     0 | 100% |
-| May   |        39,500 |     39,200 |       -300 |    -0.8% |     0 |       200 |         500 |   400 |  97% |
-Then we start asking:
-
-MRR is still growing, but is the growth rate declining?
-
-And if yes:
-
-Is that because New MRR is declining?
-
-or:
-
-Is Expansion weakening?
-
-or:
-
-Are Contraction and Churn increasing?
 */
 
 
