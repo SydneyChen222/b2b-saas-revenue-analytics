@@ -1,5 +1,8 @@
 # B2B SaaS Revenue Analytics
 
+[![dbt build](https://github.com/SydneyChen222/b2b-saas-revenue-analytics/actions/workflows/dbt_ci.yml/badge.svg)](https://github.com/SydneyChen222/b2b-saas-revenue-analytics/actions/workflows/dbt_ci.yml)
+
+
 An end-to-end analytics project modeling Monthly Recurring Revenue (MRR), customer revenue movement, and revenue retention for a fictional B2B SaaS company.
 
 The project demonstrates how an ambiguous business question can be translated into:
