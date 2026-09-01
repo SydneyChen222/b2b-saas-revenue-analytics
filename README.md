@@ -6,6 +6,20 @@ The project demonstrates how an ambiguous business question can be translated in
 
 **business requirements → metric definitions → data modeling → SQL transformations → validation → business analysis → recommendations**
 
+Built as a **dbt project** on DuckDB: layered models with `ref()` lineage,
+a 58-check test suite including a financial reconciliation control, generated
+documentation, and CI that runs the full build on every push and pull request.
+
+**Stack:** dbt · SQL · DuckDB · Python · GitHub Actions
+
+```bash
+pip install dbt-duckdb
+dbt deps
+dbt build --profiles-dir .    # seeds + models + all tests
+```
+
+See [SETUP.md](SETUP.md) for project structure and full test coverage.
+
 ---
 
 ## 1. Project Overview
@@ -411,7 +425,65 @@ dim_customer        dim_plan        dim_month
                      v
           mart_revenue_growth
           grain: month × segment
+```
 
+A second intermediate model, `int_customer_plan_month_mrr`
+(grain: month × customer × plan), supports plan mix, seat movement, and
+packaging analysis.
+
+Customer lifecycle metrics — New, Churn, and Reactivation — are deliberately
+calculated at the **customer** grain, never at the customer-plan grain. A
+customer migrating between plans must not be misread as churn on one plan plus
+new business on another.
+
+---
+
+## 11. Engineering & Data Quality
+
+The models are implemented as a dbt project so that lineage, testing, and
+documentation are part of the build rather than a manual step.
+
+### Layers
+
+| Layer | Models | Purpose |
+|---|---|---|
+| `seeds/` | 4 source tables | Raw data loaded and typed |
+| `staging/` | `stg_subscription_history` | Effective-dated validity intervals |
+| `intermediate/` | `int_customer_month_mrr`, `int_customer_plan_month_mrr` | Point-in-time state at two grains |
+| `marts/` | `mart_customer_mrr_movement`, `mart_revenue_growth` | Movement classification and business metrics |
+
+### Testing
+
+`dbt build` runs **58 checks** and fails the build if any of them break.
+
+**Generic tests** cover primary key uniqueness and not-null constraints on every
+source, referential integrity from subscriptions to customers and plans,
+accepted values on segment and status, non-negative ranges on all MRR columns,
+and grain uniqueness on every model.
+
+**Business-rule tests** enforce the logic that generic tests cannot:
+
+| Test | What it protects |
+|---|---|
+| `assert_mrr_bridge_reconciles` | Beginning + New + Expansion + Reactivation − Contraction − Churn = Ending, per month × segment |
+| `assert_movement_classification_is_valid` | Each movement component only fires under its defining condition |
+| `assert_new_mrr_occurs_once_per_customer` | New MRR fires once per customer; later returns are Reactivation |
+| `assert_no_overlapping_subscription_states` | Effective-dated intervals don't overlap, which would double-count MRR |
+| `assert_plan_grain_ties_to_customer_grain` | The customer-plan grain sums back to the customer grain |
+
+The reconciliation test is the same bridge Finance reports on, enforced as a
+build-blocking control rather than a query someone remembers to run.
+
+### CI
+
+[`.github/workflows/dbt_ci.yml`](.github/workflows/dbt_ci.yml) runs `dbt build`
+and `dbt docs generate` on every push and pull request, so the pipeline is
+verified on a clean machine rather than only locally.
+
+DuckDB is used so the project runs anywhere with no warehouse credentials or
+cost. The SQL is standard and ports to Snowflake by changing the profile.
+
+---
 
 ## Key Findings
 
