@@ -411,6 +411,7 @@ dim_customer        dim_plan        dim_month
                      v
           mart_revenue_growth
           grain: month × segment
+'''
 
 
 ## Key Findings
