@@ -1,0 +1,59 @@
+version: 2
+
+models:
+  - name: mart_customer_mrr_movement
+    description: >
+      Monthly customer MRR movement classified into new,
+      expansion, contraction, churn, and reactivation.
+    columns:
+      - name: current_mrr
+        tests: [not_null]
+      - name: previous_mrr
+        tests: [not_null]
+      - name: new_mrr
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              inclusive: true
+      - name: expansion_mrr
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              inclusive: true
+      - name: contraction_mrr
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              inclusive: true
+      - name: churn_mrr
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              inclusive: true
+      - name: reactivation_mrr
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              inclusive: true
+    tests:
+      # Grain: one row per month x customer
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: [month, customer_id]
+
+  - name: mart_revenue_growth
+    description: >
+      Segment-level monthly MRR bridge with GRR, NRR, growth
+      rate, and logo churn for business reporting.
+    columns:
+      - name: beginning_mrr
+        tests: [not_null]
+      - name: ending_mrr
+        tests: [not_null]
+      - name: grr
+        description: "Null in the first month, when beginning MRR is 0."
+      - name: nrr
+        description: "Null in the first month, when beginning MRR is 0."
+    tests:
+      # Grain: one row per month x segment
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: [month, segment]

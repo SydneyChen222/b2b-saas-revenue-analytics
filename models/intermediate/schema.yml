@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: int_customer_month_mrr
+    description: >
+      Customer MRR resolved at each month end via point-in-time
+      join against effective-dated subscription states.
+    columns:
+      - name: monthly_mrr
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0
+              inclusive: true
+      - name: customer_id
+        tests:
+          - relationships:
+              to: ref('dim_customer')
+              field: customer_id
+    tests:
+      # Grain: one row per month x customer
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: [month, customer_id]
+
+  - name: int_customer_plan_month_mrr
+    description: >
+      Customer-plan MRR state per month, for plan mix, seat
+      movement, and packaging analysis. Lifecycle metrics are
+      NOT derived at this grain.
+    columns:
+      - name: plan_mrr
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0
+              inclusive: true
+      - name: seat_count
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              inclusive: true
+    tests:
+      # Grain: one row per month x customer x plan
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: [month, customer_id, plan_id]

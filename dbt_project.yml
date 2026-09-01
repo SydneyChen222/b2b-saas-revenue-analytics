@@ -1,0 +1,37 @@
+name: 'saas_revenue_analytics'
+version: '1.0.0'
+config-version: 2
+
+profile: 'saas_revenue_analytics'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  saas_revenue_analytics:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table
+
+seeds:
+  saas_revenue_analytics:
+    +quote_columns: false
+    dim_customer:
+      +column_types:
+        signup_date: date
+    dim_month:
+      +column_types:
+        month_start_date: date
+        month_end_date: date
+    subscription_history:
+      +column_types:
+        effective_at: date
+        mrr: double
+        seat_count: integer

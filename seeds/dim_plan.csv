@@ -1,0 +1,5 @@
+plan_id,plan_name,plan_tier
+P001,Starter,1
+P002,Growth,2
+P003,Enterprise,3
+P004,AI Add-on,4

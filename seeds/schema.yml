@@ -1,0 +1,55 @@
+version: 2
+
+seeds:
+  - name: dim_customer
+    description: "One row per customer. Segment assumed historically stable in v1."
+    columns:
+      - name: customer_id
+        description: "Primary key."
+        tests: [unique, not_null]
+      - name: segment
+        tests:
+          - accepted_values:
+              values: ['SMB', 'Mid-Market', 'Enterprise']
+      - name: signup_date
+        tests: [not_null]
+
+  - name: dim_plan
+    description: "One row per plan."
+    columns:
+      - name: plan_id
+        tests: [unique, not_null]
+      - name: plan_tier
+        tests: [not_null]
+
+  - name: dim_month
+    description: "One row per reporting month."
+    columns:
+      - name: month
+        tests: [unique, not_null]
+      - name: month_end_date
+        tests: [not_null]
+
+  - name: subscription_history
+    description: "One row per subscription state change (effective-dated)."
+    columns:
+      - name: subscription_id
+        tests: [not_null]
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customer')
+              field: customer_id
+      - name: plan_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_plan')
+              field: plan_id
+      - name: status
+        tests:
+          - accepted_values:
+              values: ['active', 'cancelled']
+      - name: effective_at
+        tests: [not_null]

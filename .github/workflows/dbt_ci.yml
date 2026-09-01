@@ -1,0 +1,41 @@
+name: dbt build
+
+# Run the full pipeline and its test suite on every push and PR.
+# A failing data test blocks the merge.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dbt-duckdb
+        run: pip install dbt-duckdb==1.9.*
+
+      - name: Install dbt packages
+        run: dbt deps
+
+      - name: Build models and run all data tests
+        run: dbt build --profiles-dir .
+
+      - name: Generate dbt documentation
+        run: dbt docs generate --profiles-dir .
+
+      - name: Upload docs artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dbt-docs
+          path: target/

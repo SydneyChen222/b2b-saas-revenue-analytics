@@ -1,0 +1,7 @@
+saas_revenue_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: saas_revenue.duckdb
+      threads: 4

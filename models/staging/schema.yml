@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: stg_subscription_history
+    description: >
+      Effective-dated subscription states with a derived validity
+      interval (effective_at -> effective_until).
+    columns:
+      - name: subscription_id
+        tests: [not_null]
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customer')
+              field: customer_id
+      - name: plan_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_plan')
+              field: plan_id
+      - name: mrr
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0
+              inclusive: true
+    tests:
+      # Grain: one row per subscription_id + effective_at
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns: [subscription_id, effective_at]
