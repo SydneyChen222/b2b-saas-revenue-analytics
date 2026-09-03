@@ -419,7 +419,7 @@ dim_customer        dim_plan        dim_month
                      |
                      v
         int_customer_month_mrr
-        grain: month × customer x plan
+        grain: month × customer
                      |
                      v
        mart_customer_mrr_movement
