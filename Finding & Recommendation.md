@@ -1,4 +1,7 @@
 ## Key Findings
+![Monthly MRR movement](output/charts/02_mrr_movement.png)
+
+![Gross vs net revenue retention](output/charts/04_grr_vs_nrr.png)
 
 ### 1. Overall MRR grew, but recurring revenue performance was volatile
 
